@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    font-family: 'open sas', sans-serif;
+    color: blue;
+    line-height: 1.6;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+h1,
+h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+.navbar{
+    background-color: gray;
+    color: tan;
+    height: 70px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar a{
+    color: black;
+    padding: 10px;
+    margin: 0 5px;
+}
+.navbar a:hover{
+    border-bottom: 2px white solid;
+}
+.main{
+    height: 400px;
+    background-color: tan;
+    color: white;
+    position: relative;
+}
+.main h1{
+    font-size: 40px;
+
+}
+.main p{
+    margin: 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 300px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    grid-template-columns: repeat(2, fr);
+}
+.grid-3{
+    grid-template-columns: repeat(2, fr);
+
+}
+main grid{
+    grid-template-columns: 55% 45%;
+    gap:30px;
+    overflow: visible;
+}
+.card{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px white;
+    padding: 20px;
+    margin: 10px;
+    color: bisque;
+
+}
+.main-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+.main-form .form-control{
+    margin: 30px 0;
+}
+.main-form input[type='text'],
+.main-form input[type='email'] {
+    border: o;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: white;
+    color: bisque;
+    border: none;
+    border-radius: 5px;
+}
+.btn-primary{
+    color: black;
+}
+.btn-outline{
+    background-color: transparent;
+    border: 1px white solid ;
+}
+.btn:hover{
+    transform: scale(.98);
+}
+.main::before,
+.main::after{
+    content: '';
+    position: absolute;
+    height:100px ;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: black;
+   
+}
+.stats{
+    padding: 100px;
+}
+.text-center{
+    color: black;
+   text-align: center; 
+
+}
+.my-1{
+    margin: 1rem 0;
+}
+.my-2{
+    margin:  1.5rem 0;
+}
+.my-3{
+    margin: 2rem 0;
+}
+.my-4{
+    margin: 3rem 0;
+}
+.my-5{
+    margin: 4rem 0;
+}
+.my{
+    margin: 1rem;
+}
+.my{
+    margin:  1.5rem;
+}
+.my{
+    margin: 2rem;
+}
+.my{
+    margin: 3rem;
+}
+.my{
+    margin: 4rem
+}
+
+.py-1{
+    padding: 1rem 0;
+}
+.py-2{
+    padding:  1.5rem 0;
+}
+.py-3{
+    padding: 2rem 0;
+}
+.py-4{
+    padding: 3rem 0;
+}
+.py-5{
+    padding: 4rem 0;
+}
+.p-1{
+    padding: 1rem;
+}
+.p-2{
+    padding:  1.5rem;
+}
+.p-3{
+    padding: 2rem;
+}
+.p-4{
+    padding: 3rem;
+}
+.p-5{
+    padding: 4rem;
+}
+.stats-heading{
+    max-width: 500px;
+    margin: auto;
+    color: black;
+}
+.stats .grid h3{
+    font-size: 35px;
+    color: black;
+}
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.cli .grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid > *:first-child{
+    grid-column: 1 / span 2;
+    grid-row:m1 / span 2;
+}
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+.bg-primary, .btn-primary{
+    background-color: tan;
+    color: black;
+}
+.lead{
+    font-size: 20px;
+}
+.sm{
+    font-size: 1rem;
+}
+.md{
+    font-size: 2rem;
+    
+}
+.lg{
+    font-size: 3em; 
+}
+.xl{
+    font-size: 4rem;
+}
+/* Tablets and under */
+@media(max-width: 768px){
+    .grid, 
+    .main .grid, 
+    .stats .grid,
+    .cli .grid,
+    .clouid .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .main{
+        height: auto;
+    }
+    .main-text{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .main-form{
+        justify-self: center;
+        margin: auto;
+    }
+       
+
+}
+/* Mobile */
+@media(max-width: 500px){
+    .navbar{
+        height: 110px; ;
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color:black ;
+    }
+
+}
